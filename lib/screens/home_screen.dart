@@ -38,67 +38,90 @@ class HomeScreen extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            const DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-              child: Text(
-                'Menu',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
+            Container(
+              height: 150,
+              child: const DrawerHeader(
+                decoration: BoxDecoration(
+                  color: ThemeConstants.primaryColor,
+                ),
+                child: Text(
+                  'Data Mirror',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                  ),
                 ),
               ),
             ),
-            ListTile(
-              leading: const Icon(Icons.home),
-              title: const Text('Home'),
-              onTap: () {
-                // Navigate to the Home screen
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.bar_chart),
-              title: const Text('Stats'),
-              onTap: () {
-                // Navigate to the Stats screen
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.network_check),
-              title: const Text('Internet Speed'),
-              onTap: () {
-                // Navigate to the Internet Speed screen
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.notifications),
-              title: const Text('Alerts'),
-              onTap: () {
-                // Navigate to the Alerts screen
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.settings),
-              title: const Text('Settings'),
-              onTap: () {
-                // Navigate to the Settings screen
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.info),
-              title: const Text('About'),
-              onTap: () {
-                // Navigate to the About screen
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.help),
-              title: const Text('Help and Support'),
-              onTap: () {
-                // Navigate to the Help and Support screen
-              },
-            ),
+            Expanded(
+              // height: 680,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    children: [
+                      ListTile(
+                        leading: const Icon(Icons.home),
+                        title: const Text('Home'),
+                        onTap: () {
+                          // Navigate to the Home screen
+                        },
+                      ),
+                      ListTile(
+                        leading: const Icon(Icons.bar_chart),
+                        title: const Text('Stats'),
+                        onTap: () {
+                          // Navigate to the Stats screen
+                        },
+                      ),
+                      ListTile(
+                        leading: const Icon(Icons.network_check),
+                        title: const Text('Internet Speed'),
+                        onTap: () {
+                          // Navigate to the Internet Speed screen
+                        },
+                      ),
+                      ListTile(
+                        leading: const Icon(Icons.notifications),
+                        title: const Text('Alerts'),
+                        onTap: () {
+                          // Navigate to the Alerts screen
+                        },
+                      ),
+                      ListTile(
+                        leading: const Icon(Icons.settings),
+                        title: const Text('Settings'),
+                        onTap: () {
+                          // Navigate to the Settings screen
+                        },
+                      ),
+                    ],
+                  ),
+                  Container(
+                    decoration: const BoxDecoration(
+                      border: Border(
+                          top: BorderSide(width: 1.0, color: Colors.black12)),
+                    ),
+                    child: Column(children: [
+                      ListTile(
+                        leading: const Icon(Icons.info),
+                        title: const Text('About'),
+                        onTap: () {
+                          // Navigate to the About screen
+                        },
+                      ),
+                      ListTile(
+                        leading: const Icon(Icons.help),
+                        title: const Text('Help and Support'),
+                        onTap: () {
+                          // Navigate to the Help and Support screen
+                        },
+                      ),
+                    ]),
+                  ),
+                ],
+              ),
+            )
           ],
         ),
       ),
