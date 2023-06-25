@@ -93,10 +93,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 final prefs =
                                     await SharedPreferences.getInstance();
                                 prefs.setBool("showHome", true);
-                                Navigator.of(context).pushReplacement(
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            const HomeScreen()));
+                                // ignore: use_build_context_synchronously
+                                Navigator.of(context).pushNamed("/");
                               },
                               child: Text(
                                 "GET STARTED",
