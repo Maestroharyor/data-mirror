@@ -1,5 +1,10 @@
+import 'package:data_monitor/screens/about_screen.dart';
+import 'package:data_monitor/screens/alerts_screen.dart';
+import 'package:data_monitor/screens/help_support_screen.dart';
 import 'package:data_monitor/screens/home_screen.dart';
+import 'package:data_monitor/screens/internet_speed_screen.dart';
 import 'package:data_monitor/screens/onboarding_screen.dart';
+import 'package:data_monitor/screens/settings_screen.dart';
 import 'package:data_monitor/screens/stats_screen.dart';
 import 'package:data_monitor/theme/theme_constants.dart';
 import 'package:flutter/material.dart';
@@ -18,11 +23,11 @@ class MyApp extends StatelessWidget {
     '/onboarding': (context) => const OnboardingScreen(),
     '/': (context) => const HomeScreen(),
     '/stats': (context) => const StatsScreen(),
-    // '/internet_speed': (context) => InternetSpeedScreen(),
-    // '/alerts': (context) => AlertsScreen(),
-    // '/settings': (context) => SettingsScreen(),
-    // '/about': (context) => AboutScreen(),
-    // '/help_support': (context) => HelpSupportScreen(),
+    '/internet_speed': (context) => const InternetSpeedScreen(),
+    '/alerts': (context) => const AlertsScreen(),
+    '/settings': (context) => const SettingsScreen(),
+    '/about': (context) => const AboutScreen(),
+    '/help_support': (context) => const HelpSupportScreen(),
   };
 
   MyApp({Key? key, required this.showHome}) : super(key: key);

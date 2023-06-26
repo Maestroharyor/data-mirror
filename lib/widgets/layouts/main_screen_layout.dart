@@ -49,15 +49,18 @@ class MainScreenLayout extends StatelessWidget {
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            const DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-              child: Text(
-                'Data Mirror',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
+            Container(
+              height: 150,
+              child: const DrawerHeader(
+                decoration: BoxDecoration(
+                  color: ThemeConstants.primaryColor,
+                ),
+                child: Text(
+                  'Data Mirror',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                  ),
                 ),
               ),
             ),
@@ -137,19 +140,6 @@ class MainScreenLayout extends StatelessWidget {
                     ),
                   ),
                 ],
-              ),
-            ),
-            Container(
-              height: 50, // Adjust the height as needed
-              color: Colors.grey, // Set the background color
-              child: const Center(
-                child: Text(
-                  'Footer',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 16,
-                  ),
-                ),
               ),
             ),
           ],
