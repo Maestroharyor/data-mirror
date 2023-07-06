@@ -53,7 +53,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ),
           ),
           bottomSheet: Container(
-            height: 130,
+            height: 125,
             width: double.infinity,
             color: Colors.white,
             child: Column(children: [
@@ -65,7 +65,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     curve: Curves.easeInOut),
                 effect: const WormEffect(
                     spacing: 12.0,
-                    radius: 4.0,
+                    radius: 20.0,
                     dotWidth: 10.0,
                     dotHeight: 10.0,
                     paintStyle: PaintingStyle.fill,

@@ -15,6 +15,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final prefs = await SharedPreferences.getInstance();
   final showHome = prefs.getBool("showHome") ?? false;
+  print(showHome);
   runApp(MyApp(showHome: showHome ?? false));
 }
 
@@ -70,15 +71,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Data Mirror',
       theme: ThemeData(
+        bottomAppBarTheme: const BottomAppBarTheme(color: Colors.white),
         primaryColor: ThemeConstants.primaryColor,
         hoverColor: ThemeConstants.hoverColor,
         useMaterial3: true,
         fontFamily: 'Raleway',
       ),
       onGenerateRoute: generateRoute,
-      initialRoute: showHome ? '/onboarding' : '/',
+      initialRoute: showHome ? '/' : '/onboarding',
       // home: showHome ? HomeScreen() : OnboardingScreen(),
     );
   }

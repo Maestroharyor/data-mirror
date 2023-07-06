@@ -32,7 +32,8 @@ class HomeScreen extends StatelessWidget {
               const SpaceWrapper(
                 horizontal: 20,
                 child: DataConsumption2(),
-              )
+              ),
+              addVerticalSpace(30)
             ],
           ),
         ),

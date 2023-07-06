@@ -13,13 +13,13 @@ class DataSummary extends StatelessWidget {
       children: [
         Container(
           decoration: BoxDecoration(
-              color: ThemeConstants.grey,
+              color: Colors.white,
               borderRadius: BorderRadius.circular(10),
               border: Border.all(
-                color: Colors.black,
+                color: Colors.black.withOpacity(.4),
                 width: 1,
               )),
-          // padding: const EdgeInsets.all(10),
+          padding: const EdgeInsets.only(right: 20),
           margin: const EdgeInsets.only(top: 20),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
