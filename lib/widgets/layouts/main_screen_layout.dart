@@ -1,7 +1,4 @@
-import 'package:data_mirror/screens/home_screen.dart';
-import 'package:data_mirror/screens/stats_screen.dart';
 import 'package:data_mirror/theme/theme_constants.dart';
-import 'package:data_mirror/widgets/elements/helper_widgets.dart';
 import 'package:flutter/material.dart';
 
 class MainScreenLayout extends StatelessWidget {
@@ -16,7 +13,7 @@ class MainScreenLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final currentRoute = ModalRoute.of(context)?.settings.name;
+    // final currentRoute = ModalRoute.of(context)?.settings.name;
 
     return Scaffold(
       appBar: AppBar(
@@ -151,10 +148,10 @@ class MainScreenLayout extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomAppBar(
-        // color: ThemeConstants.hoverColor,
         height: 90,
         child: Container(
-          padding: EdgeInsetsDirectional.only(top: 5),
+          // color: ThemeConstants.hoverColor,
+          padding: const EdgeInsetsDirectional.only(top: 5),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -207,6 +204,49 @@ class MainScreenLayout extends StatelessWidget {
                         ],
                       )),
                 ],
+              ),
+              Container(
+                height: 75,
+                // width: 75,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color:
+                      ModalRoute.of(context)?.settings.name == '/internet_speed'
+                          ? ThemeConstants.primaryColor
+                          : ThemeConstants.inactiveBottomBarColor,
+                  border: Border.all(
+                    color: Colors.white,
+                    width: 2.0,
+                  ),
+                ),
+                transform: Matrix4.translationValues(0.0, -20.0, 0.0),
+                child: IconButton(
+                  onPressed: () {},
+                  icon: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Container(
+                          transform: Matrix4.translationValues(5.0, 6.0, 0.0),
+                          child: const Icon(
+                            Icons.arrow_downward,
+                            color: Colors.white,
+                            size: 20.0,
+                          ),
+                        ),
+                        Container(
+                          transform: Matrix4.translationValues(-5.0, -6.0, 0.0),
+                          child: const Icon(
+                            Icons.arrow_upward,
+                            color: Colors.white,
+                            size: 20.0,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ),
               Row(
                 children: [

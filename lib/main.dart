@@ -7,6 +7,7 @@ import 'package:data_mirror/screens/onboarding_screen.dart';
 import 'package:data_mirror/screens/settings_screen.dart';
 import 'package:data_mirror/screens/stats_screen.dart';
 import 'package:data_mirror/theme/theme_constants.dart';
+import 'package:data_mirror/utils/animation/no_animation.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -32,6 +33,40 @@ class MyApp extends StatelessWidget {
 
   MyApp({Key? key, required this.showHome}) : super(key: key);
 
+  Route<dynamic> generateRoute(RouteSettings settings) {
+    switch (settings.name) {
+      // case '/':
+      //   return MaterialPageRoute(
+      //     builder: routes[settings.name]!,
+      //     settings: settings,
+      //   );
+      case '/onboarding':
+        return MaterialPageRoute(
+          builder: routes[settings.name]!,
+          settings: settings,
+        );
+      case '/':
+      case '/stats':
+      case '/internet_speed':
+      case '/alerts':
+      case '/settings':
+      case '/about':
+      case '/help_support':
+        return NoAnimationPageRoute(
+          builder: routes[settings.name]!,
+          settings: settings,
+        );
+      default:
+        return MaterialPageRoute(
+          builder: (_) => const Scaffold(
+            body: Center(
+              child: Text('Route not found.'),
+            ),
+          ),
+        );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -42,7 +77,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         fontFamily: 'Raleway',
       ),
-      routes: routes,
+      onGenerateRoute: generateRoute,
       initialRoute: showHome ? '/onboarding' : '/',
       // home: showHome ? HomeScreen() : OnboardingScreen(),
     );
