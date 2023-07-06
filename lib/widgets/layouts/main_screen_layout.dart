@@ -1,6 +1,7 @@
-import 'package:data_monitor/screens/home_screen.dart';
-import 'package:data_monitor/screens/stats_screen.dart';
-import 'package:data_monitor/theme/theme_constants.dart';
+import 'package:data_mirror/screens/home_screen.dart';
+import 'package:data_mirror/screens/stats_screen.dart';
+import 'package:data_mirror/theme/theme_constants.dart';
+import 'package:data_mirror/widgets/elements/helper_widgets.dart';
 import 'package:flutter/material.dart';
 
 class MainScreenLayout extends StatelessWidget {
@@ -16,7 +17,7 @@ class MainScreenLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final currentRoute = ModalRoute.of(context)?.settings.name;
-    print(currentRoute);
+
     return Scaffold(
       appBar: AppBar(
         title: Text(pageTitle),
@@ -145,6 +146,120 @@ class MainScreenLayout extends StatelessWidget {
                   ],
                 ),
               ),
+            ],
+          ),
+        ),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        // color: ThemeConstants.hoverColor,
+        height: 90,
+        child: Container(
+          padding: EdgeInsetsDirectional.only(top: 5),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  TextButton(
+                      onPressed: () {
+                        if (ModalRoute.of(context)?.settings.name != '/') {
+                          Navigator.of(context).pushNamed("/");
+                        }
+                      },
+                      child: Column(
+                        children: [
+                          Icon(Icons.home,
+                              color:
+                                  ModalRoute.of(context)?.settings.name == '/'
+                                      ? ThemeConstants.primaryColor
+                                      : ThemeConstants.inactiveBottomBarColor),
+                          Text('Home',
+                              style: TextStyle(
+                                  color: ModalRoute.of(context)
+                                              ?.settings
+                                              .name ==
+                                          '/'
+                                      ? ThemeConstants.primaryColor
+                                      : ThemeConstants.inactiveBottomBarColor)),
+                        ],
+                      )),
+                  TextButton(
+                      onPressed: () {
+                        if (ModalRoute.of(context)?.settings.name != '/stats') {
+                          Navigator.of(context).pushNamed("/stats");
+                        }
+                      },
+                      child: Column(
+                        children: [
+                          Icon(Icons.bar_chart,
+                              color: ModalRoute.of(context)?.settings.name ==
+                                      '/stats'
+                                  ? ThemeConstants.primaryColor
+                                  : ThemeConstants.inactiveBottomBarColor),
+                          Text('Stats',
+                              style: TextStyle(
+                                  color: ModalRoute.of(context)
+                                              ?.settings
+                                              .name ==
+                                          '/stats'
+                                      ? ThemeConstants.primaryColor
+                                      : ThemeConstants.inactiveBottomBarColor)),
+                        ],
+                      )),
+                ],
+              ),
+              Row(
+                children: [
+                  TextButton(
+                      onPressed: () {
+                        if (ModalRoute.of(context)?.settings.name !=
+                            '/alerts') {
+                          Navigator.of(context).pushNamed("/alerts");
+                        }
+                      },
+                      child: Column(
+                        children: [
+                          Icon(Icons.notifications,
+                              color: ModalRoute.of(context)?.settings.name ==
+                                      '/alerts'
+                                  ? ThemeConstants.primaryColor
+                                  : ThemeConstants.inactiveBottomBarColor),
+                          Text('Alerts',
+                              style: TextStyle(
+                                  color: ModalRoute.of(context)
+                                              ?.settings
+                                              .name ==
+                                          '/alerts'
+                                      ? ThemeConstants.primaryColor
+                                      : ThemeConstants.inactiveBottomBarColor)),
+                        ],
+                      )),
+                  TextButton(
+                      onPressed: () {
+                        if (ModalRoute.of(context)?.settings.name !=
+                            '/settings') {
+                          Navigator.of(context).pushNamed("/settings");
+                        }
+                      },
+                      child: Column(
+                        children: [
+                          Icon(Icons.settings,
+                              color: ModalRoute.of(context)?.settings.name ==
+                                      '/settings'
+                                  ? ThemeConstants.primaryColor
+                                  : ThemeConstants.inactiveBottomBarColor),
+                          Text('Settings',
+                              style: TextStyle(
+                                  color: ModalRoute.of(context)
+                                              ?.settings
+                                              .name ==
+                                          '/settings'
+                                      ? ThemeConstants.primaryColor
+                                      : ThemeConstants.inactiveBottomBarColor)),
+                        ],
+                      )),
+                ],
+              )
             ],
           ),
         ),

@@ -1,7 +1,7 @@
-import 'package:data_monitor/screens/home_screen.dart';
-import 'package:data_monitor/theme/theme_constants.dart';
-import 'package:data_monitor/widgets/elements/helper_widgets.dart';
-import 'package:data_monitor/widgets/partials/onboarding/build_onboarding_screen.dart';
+import 'package:data_mirror/screens/home_screen.dart';
+import 'package:data_mirror/theme/theme_constants.dart';
+import 'package:data_mirror/widgets/elements/helper_widgets.dart';
+import 'package:data_mirror/widgets/partials/onboarding/build_onboarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:shared_preferences/shared_preferences.dart';

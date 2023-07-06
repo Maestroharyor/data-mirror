@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:data_monitor/widgets/elements/helper_widgets.dart';
+import 'package:data_mirror/widgets/elements/helper_widgets.dart';
 
 class onboarding_screen_2 extends StatelessWidget {
   const onboarding_screen_2({

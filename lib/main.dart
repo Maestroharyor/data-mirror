@@ -1,12 +1,12 @@
-import 'package:data_monitor/screens/about_screen.dart';
-import 'package:data_monitor/screens/alerts_screen.dart';
-import 'package:data_monitor/screens/help_support_screen.dart';
-import 'package:data_monitor/screens/home_screen.dart';
-import 'package:data_monitor/screens/internet_speed_screen.dart';
-import 'package:data_monitor/screens/onboarding_screen.dart';
-import 'package:data_monitor/screens/settings_screen.dart';
-import 'package:data_monitor/screens/stats_screen.dart';
-import 'package:data_monitor/theme/theme_constants.dart';
+import 'package:data_mirror/screens/about_screen.dart';
+import 'package:data_mirror/screens/alerts_screen.dart';
+import 'package:data_mirror/screens/help_support_screen.dart';
+import 'package:data_mirror/screens/home_screen.dart';
+import 'package:data_mirror/screens/internet_speed_screen.dart';
+import 'package:data_mirror/screens/onboarding_screen.dart';
+import 'package:data_mirror/screens/settings_screen.dart';
+import 'package:data_mirror/screens/stats_screen.dart';
+import 'package:data_mirror/theme/theme_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

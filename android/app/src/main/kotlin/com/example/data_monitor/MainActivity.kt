@@ -1,4 +1,4 @@
-package com.example.data_monitor
+package com.example.data_mirror
 
 import io.flutter.embedding.android.FlutterActivity
 

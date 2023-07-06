@@ -1,4 +1,4 @@
-import 'package:data_monitor/widgets/layouts/main_screen_layout.dart';
+import 'package:data_mirror/widgets/layouts/main_screen_layout.dart';
 import 'package:flutter/material.dart';
 
 class AlertsScreen extends StatelessWidget {
