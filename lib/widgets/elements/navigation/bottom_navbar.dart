@@ -14,7 +14,7 @@ class BottomNavBar extends StatelessWidget {
       height: 90,
       child: Container(
         color: Theme.of(context).bottomAppBarTheme.color,
-        padding: const EdgeInsetsDirectional.only(top: 5),
+        padding: const EdgeInsets.only(top: 5, right: 5),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

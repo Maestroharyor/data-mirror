@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
   final Map<String, WidgetBuilder> routes = {
     '/onboarding': (context) => const OnboardingScreen(),
     '/': (context) => const HomeScreen(),
-    '/stats': (context) => const StatsScreen(),
+    '/stats': (context) => StatsScreen(),
     '/internet_speed': (context) => const InternetSpeedScreen(),
     '/alerts': (context) => const AlertsScreen(),
     '/settings': (context) => const SettingsScreen(),
